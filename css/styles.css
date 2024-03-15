@@ -94,7 +94,19 @@ body {
 }
 
 .section-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
   margin-bottom: 8px;
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* #endregion */
@@ -477,19 +489,7 @@ body {
   padding: 32px 0;
 }
 
-.team-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
-}
-
 .team-text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 8px;
 }
@@ -539,34 +539,43 @@ body {
 
 /* #region Section Portfolio */
 
-/* #endregion */
-
-
-.portfolio-title {
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
-  color: #2e2f42;
-}
-
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  gap: 48px;
+  justify-content: center;
 }
 
 .portfolio-item {
   background-color: #ffffff;
-  width: calc((100% - 2 * 24px) / 3);
+  min-width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .portfolio-item {
+    max-width: calc((100% - 1 * 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio-list {
+    row-gap: 48px;
+  }
+
+  .portfolio-item {
+    max-width: calc((100% - 3 * 24px) / 4);
+  }
 }
 
 .portfolio-overlay {
@@ -602,19 +611,14 @@ body {
 }
 
 .portfolio-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+  text-align: left;
 }
 
-.portfolio-text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
+/* #endregion */
 
+/* #region Page Footer */
+
+/* #endregion */
 
 /* #region Mobile menu */
 
